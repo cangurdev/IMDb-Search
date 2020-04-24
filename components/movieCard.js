@@ -6,7 +6,7 @@ import Feedback from "./feedback";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { faHeart as fasHeart } from "@fortawesome/free-solid-svg-icons";
-import API_KEY from "../config";
+import config from "../config.js";
 @inject("Favorite")
 @observer
 class MovieCard extends React.Component {
@@ -57,7 +57,7 @@ class MovieCard extends React.Component {
   };
   fetchMovie = () => {
     fetch(
-      `https://www.omdbapi.com/?apikey=${API_KEY}=${this.props.movie.imdbID}&plot=full`
+      `https://www.omdbapi.com/?apikey=${config.API_KEY}&i=${this.props.movie.imdbID}&plot=full`
     )
       .then((res) => res.json())
       .then((res) => {
