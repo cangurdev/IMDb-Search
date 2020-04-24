@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Favorite from "../store/favoriteStore";
 import { observer } from "mobx-react";
-import API_KEY from "../config";
+import config from "../config.js";
 @observer
 class MoviesList extends React.Component {
   state = {
@@ -19,7 +19,7 @@ class MoviesList extends React.Component {
   search = (event) => {
     event.preventDefault();
     fetch(
-      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${this.state.searchTerm}&type=movie`
+      `https://www.omdbapi.com/?apikey=${config.API_KEY}&s=${this.state.searchTerm}&type=movie`
     )
       .then((res) => res.json())
       .then((res) => {
