@@ -1,0 +1,77 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary-color: #e6b800;
+
+body {
+  background-image: url("/wallpaper.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.card {
+  width: 25%;
+  padding: 0.3rem;
+  background-color: #f2f2f2;
+
+  img {
+    height: 24rem;
+  }
+}
+
+.navbar {
+  background-color: #000000;
+  a {
+    color: $primary-color;
+  }
+}
+
+.buttonColor {
+  color: $primary-color;
+  background-color: #000000;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+.col {
+  height: 36rem;
+}
+.Modal {
+  background-color: #f2f2f2;
+}
+.detail {
+  width: 33%;
+}
+.searchButton {
+  button {
+    height: 3rem;
+    width: 4rem;
+  }
+
+  input {
+    width: 40rem;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+  }
+}
+.rowC {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 50%;
+  }
+  @media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+    .searchButton input {
+      width: 20rem;
+    }
+  }
+}
