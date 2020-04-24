@@ -1,5 +1,5 @@
 # IMDb-Search
-
+A simple application to search movies. 
 ## Setup
 
 Get the code by either cloning this repository using git
@@ -16,3 +16,5 @@ Then start the example app with:
 npm run dev
 ```
 The app should now be up and running at http://localhost:3000 
+
+To use api, get your key from [OMDb](http://www.omdbapi.com/) and add your api key to config.js file
